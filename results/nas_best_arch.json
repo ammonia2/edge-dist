@@ -1,0 +1,42 @@
+{
+  "arch": {
+    "resolution": 32,
+    "stem_channels": 16,
+    "stages": [
+      {
+        "blocks": 1,
+        "channels": 64,
+        "kernel": 3,
+        "block": "conv",
+        "expand": 6,
+        "act": "silu"
+      },
+      {
+        "blocks": 3,
+        "channels": 64,
+        "kernel": 5,
+        "block": "mbconv",
+        "expand": 4,
+        "act": "relu"
+      },
+      {
+        "blocks": 1,
+        "channels": 96,
+        "kernel": 5,
+        "block": "dwsep",
+        "expand": 4,
+        "act": "relu"
+      }
+    ]
+  },
+  "proxy_val_acc": 51.18,
+  "latency_ms": 0.32023850008044974,
+  "size_mb": 0.5272855758666992,
+  "peak_mem_mb": 15.3828125,
+  "params": 139802,
+  "constraints": {
+    "max_latency_ms": 4.0,
+    "max_size_mb": 2.0,
+    "max_peak_mem_mb": 30.0
+  }
+}

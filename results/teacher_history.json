@@ -1,0 +1,24 @@
+{
+  "model": "resnet50",
+  "params": 23712932,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.30293484539032,
+      "test_acc": 59.5,
+      "epoch_time_s": 33.32217597961426
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.5623014387512206,
+      "test_acc": 74.74,
+      "epoch_time_s": 31.522012948989868
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.2560802956008912,
+      "test_acc": 81.14,
+      "epoch_time_s": 31.279943227767944
+    }
+  ]
+}

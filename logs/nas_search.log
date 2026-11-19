@@ -1,0 +1,63 @@
+constraints: {'max_latency_ms': 4.0, 'max_size_mb': 2.0, 'max_peak_mem_mb': 30.0}
+generation 0: sampling 8 deployable architectures
+  [gen 0] #00 accepted params= 105.3K lat=0.29ms size=0.40MB mem=14.8MB val_acc=47.68%
+  [gen 0] #01 rejected params=1176.0K lat=1.78ms size=4.48MB mem=33.2MB size 4.48MB > 2.0MB; peak mem 33.2MB > 30.0MB
+  [gen 0] #02 rejected params= 568.5K lat=0.92ms size=2.16MB mem=23.9MB size 2.16MB > 2.0MB
+  [gen 0] #03 accepted params=  50.8K lat=0.20ms size=0.19MB mem=14.3MB val_acc=45.80%
+  [gen 0] #04 rejected params=1671.8K lat=1.12ms size=6.38MB mem=35.6MB size 6.38MB > 2.0MB; peak mem 35.6MB > 30.0MB
+  [gen 0] #05 accepted params=  89.2K lat=0.14ms size=0.34MB mem=15.0MB val_acc=42.92%
+  [gen 0] #06 rejected params=2376.0K lat=4.95ms size=9.06MB mem=44.3MB latency 4.95ms > 4.0ms; size 9.06MB > 2.0MB; peak mem 44.3MB > 30.0MB
+  [gen 0] #07 accepted params= 115.6K lat=0.15ms size=0.44MB mem=14.9MB val_acc=43.84%
+  [gen 0] #08 accepted params=  54.4K lat=0.35ms size=0.21MB mem=14.6MB val_acc=38.90%
+  [gen 0] #09 accepted params=   8.7K lat=0.08ms size=0.04MB mem=13.5MB val_acc=42.24%
+  [gen 0] #10 accepted params=  22.1K lat=0.12ms size=0.09MB mem=13.6MB val_acc=38.60%
+  [gen 0] #11 accepted params= 159.3K lat=0.40ms size=0.61MB mem=16.7MB val_acc=43.82%
+generation 1: best so far 47.68%
+  [gen 1] #12 accepted params=  81.9K lat=0.20ms size=0.32MB mem=14.7MB val_acc=45.00%
+  [gen 1] #13 accepted params=  80.4K lat=0.27ms size=0.31MB mem=15.2MB val_acc=41.74%
+  [gen 1] #14 accepted params= 340.6K lat=0.86ms size=1.30MB mem=18.9MB val_acc=44.68%
+  [gen 1] #15 accepted params=  50.8K lat=0.34ms size=0.19MB mem=14.4MB val_acc=46.88%
+  [gen 1] #16 accepted params= 190.6K lat=0.35ms size=0.72MB mem=16.1MB val_acc=46.70%
+  [gen 1] #17 accepted params= 117.1K lat=0.31ms size=0.44MB mem=14.9MB val_acc=47.04%
+  [gen 1] #18 accepted params=  89.2K lat=0.14ms size=0.34MB mem=15.0MB val_acc=39.96%
+  [gen 1] #19 accepted params=   9.7K lat=0.09ms size=0.04MB mem=13.6MB val_acc=41.70%
+generation 2: best so far 47.68%
+  [gen 2] #20 accepted params=  60.5K lat=0.20ms size=0.23MB mem=14.2MB val_acc=44.06%
+  [gen 2] #21 accepted params= 375.9K lat=0.31ms size=1.43MB mem=18.9MB val_acc=47.46%
+  [gen 2] #22 accepted params= 117.1K lat=0.19ms size=0.44MB mem=14.8MB val_acc=48.16%
+  [gen 2] #23 accepted params= 240.3K lat=0.93ms size=0.92MB mem=16.2MB val_acc=49.38%
+  [gen 2] #24 accepted params= 117.1K lat=0.29ms size=0.44MB mem=14.9MB val_acc=49.12%
+  [gen 2] #25 accepted params=  59.1K lat=0.22ms size=0.23MB mem=14.3MB val_acc=44.94%
+  [gen 2] #26 accepted params=  50.8K lat=0.22ms size=0.19MB mem=14.5MB val_acc=47.46%
+  [gen 2] #27 accepted params=  71.2K lat=0.22ms size=0.27MB mem=14.4MB val_acc=49.56%
+generation 3: best so far 49.56%
+  [gen 3] #28 accepted params= 368.1K lat=0.73ms size=1.41MB mem=17.9MB val_acc=46.34%
+  [gen 3] #29 accepted params= 141.1K lat=0.38ms size=0.54MB mem=15.1MB val_acc=49.50%
+  [gen 3] #30 accepted params=  75.1K lat=0.18ms size=0.29MB mem=14.5MB val_acc=48.84%
+  [gen 3] #31 accepted params=  63.1K lat=0.18ms size=0.24MB mem=14.4MB val_acc=49.82%
+  [gen 3] #32 accepted params= 112.2K lat=0.17ms size=0.43MB mem=14.8MB val_acc=49.24%
+  [gen 3] #33 accepted params=  83.2K lat=0.39ms size=0.32MB mem=14.5MB val_acc=48.48%
+  [gen 3] #34 accepted params= 264.3K lat=0.72ms size=1.01MB mem=16.4MB val_acc=45.36%
+  [gen 3] #35 accepted params=  97.0K lat=0.22ms size=0.37MB mem=14.6MB val_acc=47.48%
+generation 4: best so far 49.82%
+  [gen 4] #36 accepted params= 139.8K lat=0.32ms size=0.53MB mem=15.4MB val_acc=51.18%
+  [gen 4] #37 accepted params= 136.2K lat=0.29ms size=0.52MB mem=15.0MB val_acc=48.06%
+  [gen 4] #38 accepted params=  42.8K lat=0.26ms size=0.16MB mem=14.2MB val_acc=44.06%
+  [gen 4] #39 accepted params=  42.8K lat=0.14ms size=0.16MB mem=14.1MB val_acc=45.56%
+  [gen 4] #40 accepted params= 182.6K lat=0.50ms size=0.69MB mem=15.7MB val_acc=49.14%
+  [gen 4] #41 accepted params= 128.2K lat=0.44ms size=0.49MB mem=15.1MB val_acc=47.28%
+  [gen 4] #42 accepted params=  94.5K lat=0.21ms size=0.36MB mem=14.8MB val_acc=44.40%
+  [gen 4] #43 accepted params=  76.0K lat=0.28ms size=0.29MB mem=14.4MB val_acc=49.66%
+generation 5: best so far 51.18%
+  [gen 5] #44 accepted params= 139.8K lat=0.20ms size=0.53MB mem=15.1MB val_acc=48.40%
+  [gen 5] #45 accepted params=  29.1K lat=0.08ms size=0.11MB mem=13.8MB val_acc=45.48%
+  [gen 5] #46 accepted params= 144.6K lat=0.38ms size=0.55MB mem=15.5MB val_acc=49.62%
+  [gen 5] #47 accepted params=  76.0K lat=0.27ms size=0.29MB mem=14.4MB val_acc=48.20%
+  [gen 5] #48 accepted params=  76.0K lat=0.17ms size=0.29MB mem=14.3MB val_acc=46.38%
+  [gen 5] #49 accepted params= 309.9K lat=0.38ms size=1.17MB mem=17.2MB val_acc=49.42%
+  [gen 5] #50 accepted params=  52.0K lat=0.20ms size=0.20MB mem=14.3MB val_acc=46.12%
+  [gen 5] #51 accepted params= 139.8K lat=0.30ms size=0.53MB mem=15.4MB val_acc=50.08%
+
+search done in 4.7 min: 52 candidates, 4 rejected by constraints
+best: {"resolution": 32, "stem_channels": 16, "stages": [{"blocks": 1, "channels": 64, "kernel": 3, "block": "conv", "expand": 6, "act": "silu"}, {"blocks": 3, "channels": 64, "kernel": 5, "block": "mbconv", "expand": 4, "act": "relu"}, {"blocks": 1, "channels": 96, "kernel": 5, "block": "dwsep", "expand": 4, "act": "relu"}]}
+proxy val acc 51.18%  latency 0.32ms  size 0.53MB

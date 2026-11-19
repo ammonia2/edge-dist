@@ -1,0 +1,4 @@
+student,baseline_acc_%,kd_acc_%,kd_gain_pts,teacher_acc_%
+mobilenetv2,54.44,30.69,-23.749999999999996,81.14
+squeezenet,51.39,38.25,-13.14,81.14
+efficientnet_lite0,56.67,48.8,-7.8700000000000045,81.14

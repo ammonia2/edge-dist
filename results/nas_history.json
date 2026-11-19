@@ -1,0 +1,2070 @@
+{
+  "constraints": {
+    "max_latency_ms": 4.0,
+    "max_size_mb": 2.0,
+    "max_peak_mem_mb": 30.0
+  },
+  "search_time_s": 283.0393340587616,
+  "history": [
+    {
+      "id": 0,
+      "generation": 0,
+      "arch": {
+        "resolution": 28,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 48,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 105322,
+      "latency_ms": 0.2859695000552165,
+      "size_mb": 0.4019651412963867,
+      "peak_mem_mb": 14.765625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 47.68,
+      "fitness": 47.68,
+      "train_time_s": 16.23111391067505
+    },
+    {
+      "id": 1,
+      "generation": 0,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 2,
+            "channels": 128,
+            "kernel": 7,
+            "block": "mbconv",
+            "expand": 6,
+            "act": "relu6"
+          },
+          {
+            "blocks": 1,
+            "channels": 128,
+            "kernel": 7,
+            "block": "conv",
+            "expand": 6,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 3,
+            "channels": 128,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 3,
+            "channels": 128,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 1175994,
+      "latency_ms": 1.7826094999691122,
+      "size_mb": 4.475505828857422,
+      "peak_mem_mb": 33.23828125,
+      "status": "rejected",
+      "violations": "size 4.48MB > 2.0MB; peak mem 33.2MB > 30.0MB",
+      "val_acc": null,
+      "fitness": -Infinity,
+      "train_time_s": 0.0
+    },
+    {
+      "id": 2,
+      "generation": 0,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 32,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 32,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 6,
+            "act": "relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 128,
+            "kernel": 5,
+            "block": "conv",
+            "expand": 6,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 568490,
+      "latency_ms": 0.9209170000303857,
+      "size_mb": 2.1648473739624023,
+      "peak_mem_mb": 23.86328125,
+      "status": "rejected",
+      "violations": "size 2.16MB > 2.0MB",
+      "val_acc": null,
+      "fitness": -Infinity,
+      "train_time_s": 0.0
+    },
+    {
+      "id": 3,
+      "generation": 0,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 50778,
+      "latency_ms": 0.2013130001614627,
+      "size_mb": 0.1931142807006836,
+      "peak_mem_mb": 14.26953125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 45.8,
+      "fitness": 45.8,
+      "train_time_s": 5.264648199081421
+    },
+    {
+      "id": 4,
+      "generation": 0,
+      "arch": {
+        "resolution": 28,
+        "stem_channels": 32,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 32,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "leaky_relu"
+          },
+          {
+            "blocks": 3,
+            "channels": 128,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 2,
+            "act": "leaky_relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 128,
+            "kernel": 7,
+            "block": "conv",
+            "expand": 4,
+            "act": "relu6"
+          }
+        ]
+      },
+      "params": 1671818,
+      "latency_ms": 1.119703999847843,
+      "size_mb": 6.378543853759766,
+      "peak_mem_mb": 35.6484375,
+      "status": "rejected",
+      "violations": "size 6.38MB > 2.0MB; peak mem 35.6MB > 30.0MB",
+      "val_acc": null,
+      "fitness": -Infinity,
+      "train_time_s": 0.0
+    },
+    {
+      "id": 5,
+      "generation": 0,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 64,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 2,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 128,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 2,
+            "act": "leaky_relu"
+          }
+        ]
+      },
+      "params": 89226,
+      "latency_ms": 0.1443969999854744,
+      "size_mb": 0.342315673828125,
+      "peak_mem_mb": 15.046875,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 42.92,
+      "fitness": 42.92,
+      "train_time_s": 4.905034065246582
+    },
+    {
+      "id": 6,
+      "generation": 0,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 7,
+            "block": "conv",
+            "expand": 2,
+            "act": "leaky_relu"
+          },
+          {
+            "blocks": 3,
+            "channels": 128,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 2,
+            "channels": 128,
+            "kernel": 7,
+            "block": "conv",
+            "expand": 4,
+            "act": "leaky_relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 128,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 2376034,
+      "latency_ms": 4.950070499944559,
+      "size_mb": 9.061966896057129,
+      "peak_mem_mb": 44.30078125,
+      "status": "rejected",
+      "violations": "latency 4.95ms > 4.0ms; size 9.06MB > 2.0MB; peak mem 44.3MB > 30.0MB",
+      "val_acc": null,
+      "fitness": -Infinity,
+      "train_time_s": 0.0
+    },
+    {
+      "id": 7,
+      "generation": 0,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 32,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 2,
+            "act": "relu"
+          },
+          {
+            "blocks": 3,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "leaky_relu"
+          }
+        ]
+      },
+      "params": 115594,
+      "latency_ms": 0.14608250012315693,
+      "size_mb": 0.4426259994506836,
+      "peak_mem_mb": 14.90625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 43.84,
+      "fitness": 43.84,
+      "train_time_s": 2.426269054412842
+    },
+    {
+      "id": 8,
+      "generation": 0,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 32,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 32,
+            "kernel": 7,
+            "block": "conv",
+            "expand": 6,
+            "act": "leaky_relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 32,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 2,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 54378,
+      "latency_ms": 0.3496500000892411,
+      "size_mb": 0.20980072021484375,
+      "peak_mem_mb": 14.55078125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 38.9,
+      "fitness": 38.9,
+      "train_time_s": 6.249453783035278
+    },
+    {
+      "id": 9,
+      "generation": 0,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 24,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 2,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 128,
+            "kernel": 7,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 8690,
+      "latency_ms": 0.07749449991933943,
+      "size_mb": 0.036834716796875,
+      "peak_mem_mb": 13.47265625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 42.24,
+      "fitness": 42.24,
+      "train_time_s": 6.408075332641602
+    },
+    {
+      "id": 10,
+      "generation": 0,
+      "arch": {
+        "resolution": 28,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 16,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu6"
+          },
+          {
+            "blocks": 3,
+            "channels": 16,
+            "kernel": 5,
+            "block": "conv",
+            "expand": 6,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 22090,
+      "latency_ms": 0.12137099975007004,
+      "size_mb": 0.0919952392578125,
+      "peak_mem_mb": 13.625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 38.6,
+      "fitness": 38.6,
+      "train_time_s": 4.39243745803833
+    },
+    {
+      "id": 11,
+      "generation": 0,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 2,
+            "channels": 48,
+            "kernel": 7,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "relu6"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 7,
+            "block": "conv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 159322,
+      "latency_ms": 0.39591649988324207,
+      "size_mb": 0.6119098663330078,
+      "peak_mem_mb": 16.66796875,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 43.82,
+      "fitness": 43.82,
+      "train_time_s": 11.479557514190674
+    },
+    {
+      "id": 12,
+      "generation": 1,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 2,
+            "channels": 48,
+            "kernel": 7,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "relu6"
+          },
+          {
+            "blocks": 1,
+            "channels": 128,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 2,
+            "act": "leaky_relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 128,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "leaky_relu"
+          }
+        ]
+      },
+      "params": 81882,
+      "latency_ms": 0.20086799986529513,
+      "size_mb": 0.3155632019042969,
+      "peak_mem_mb": 14.6953125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 45.0,
+      "fitness": 45.0,
+      "train_time_s": 3.980762004852295
+    },
+    {
+      "id": 13,
+      "generation": 1,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 2,
+            "channels": 24,
+            "kernel": 7,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "relu6"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 7,
+            "block": "conv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 80434,
+      "latency_ms": 0.2736794999691483,
+      "size_mb": 0.311370849609375,
+      "peak_mem_mb": 15.21875,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 41.74,
+      "fitness": 41.74,
+      "train_time_s": 4.3529298305511475
+    },
+    {
+      "id": 14,
+      "generation": 1,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 32,
+        "stages": [
+          {
+            "blocks": 2,
+            "channels": 48,
+            "kernel": 7,
+            "block": "conv",
+            "expand": 6,
+            "act": "relu6"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 7,
+            "block": "conv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 340586,
+      "latency_ms": 0.8634920000076818,
+      "size_mb": 1.3018226623535156,
+      "peak_mem_mb": 18.89453125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 44.68,
+      "fitness": 44.68,
+      "train_time_s": 1.2691504955291748
+    },
+    {
+      "id": 15,
+      "generation": 1,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "silu"
+          }
+        ]
+      },
+      "params": 50778,
+      "latency_ms": 0.33839849993455573,
+      "size_mb": 0.19356441497802734,
+      "peak_mem_mb": 14.40234375,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 46.88,
+      "fitness": 46.88,
+      "train_time_s": 1.2273271083831787
+    },
+    {
+      "id": 16,
+      "generation": 1,
+      "arch": {
+        "resolution": 28,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 48,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 190570,
+      "latency_ms": 0.35463600011098606,
+      "size_mb": 0.722869873046875,
+      "peak_mem_mb": 16.1328125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 46.7,
+      "fitness": 46.7,
+      "train_time_s": 6.4116270542144775
+    },
+    {
+      "id": 17,
+      "generation": 1,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 117058,
+      "latency_ms": 0.31310300005316094,
+      "size_mb": 0.4441499710083008,
+      "peak_mem_mb": 14.87890625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 47.04,
+      "fitness": 47.04,
+      "train_time_s": 3.73899507522583
+    },
+    {
+      "id": 18,
+      "generation": 1,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 64,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 2,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 128,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 2,
+            "act": "silu"
+          }
+        ]
+      },
+      "params": 89226,
+      "latency_ms": 0.13914900000600028,
+      "size_mb": 0.3424701690673828,
+      "peak_mem_mb": 15.0390625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 39.96,
+      "fitness": 39.96,
+      "train_time_s": 0.8893425464630127
+    },
+    {
+      "id": 19,
+      "generation": 1,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 32,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 24,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 2,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 128,
+            "kernel": 7,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 9714,
+      "latency_ms": 0.08865999984664086,
+      "size_mb": 0.04055976867675781,
+      "peak_mem_mb": 13.60546875,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 41.7,
+      "fitness": 41.7,
+      "train_time_s": 1.7907886505126953
+    },
+    {
+      "id": 20,
+      "generation": 2,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 32,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "silu"
+          }
+        ]
+      },
+      "params": 60458,
+      "latency_ms": 0.20048900023539318,
+      "size_mb": 0.23043155670166016,
+      "peak_mem_mb": 14.21875,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 44.06,
+      "fitness": 44.06,
+      "train_time_s": 2.347320795059204
+    },
+    {
+      "id": 21,
+      "generation": 2,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 2,
+            "channels": 128,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          }
+        ]
+      },
+      "params": 375938,
+      "latency_ms": 0.30784249997850566,
+      "size_mb": 1.4312362670898438,
+      "peak_mem_mb": 18.9296875,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 47.46,
+      "fitness": 47.46,
+      "train_time_s": 1.3065185546875
+    },
+    {
+      "id": 22,
+      "generation": 2,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 117058,
+      "latency_ms": 0.18907749995378254,
+      "size_mb": 0.44403553009033203,
+      "peak_mem_mb": 14.828125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 48.16,
+      "fitness": 48.16,
+      "train_time_s": 1.0556752681732178
+    },
+    {
+      "id": 23,
+      "generation": 2,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 48,
+            "kernel": 5,
+            "block": "conv",
+            "expand": 4,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 240322,
+      "latency_ms": 0.9270334999200713,
+      "size_mb": 0.9153366088867188,
+      "peak_mem_mb": 16.19140625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.38,
+      "fitness": 49.38,
+      "train_time_s": 2.2381319999694824
+    },
+    {
+      "id": 24,
+      "generation": 2,
+      "arch": {
+        "resolution": 28,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 117058,
+      "latency_ms": 0.2932089998921583,
+      "size_mb": 0.4441499710083008,
+      "peak_mem_mb": 14.921875,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.12,
+      "fitness": 49.12,
+      "train_time_s": 2.039077043533325
+    },
+    {
+      "id": 25,
+      "generation": 2,
+      "arch": {
+        "resolution": 28,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 48,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 64,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 59114,
+      "latency_ms": 0.22308450002128666,
+      "size_mb": 0.22835159301757812,
+      "peak_mem_mb": 14.31640625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 44.94,
+      "fitness": 44.94,
+      "train_time_s": 4.379180192947388
+    },
+    {
+      "id": 26,
+      "generation": 2,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "silu"
+          }
+        ]
+      },
+      "params": 50778,
+      "latency_ms": 0.21746499987784773,
+      "size_mb": 0.19317913055419922,
+      "peak_mem_mb": 14.515625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 47.46,
+      "fitness": 47.46,
+      "train_time_s": 1.2043507099151611
+    },
+    {
+      "id": 27,
+      "generation": 2,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 71162,
+      "latency_ms": 0.22270999988904805,
+      "size_mb": 0.2708091735839844,
+      "peak_mem_mb": 14.38671875,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.56,
+      "fitness": 49.56,
+      "train_time_s": 5.3541178703308105
+    },
+    {
+      "id": 28,
+      "generation": 3,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 48,
+            "kernel": 5,
+            "block": "conv",
+            "expand": 4,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 2,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 368058,
+      "latency_ms": 0.7264144999226119,
+      "size_mb": 1.4056882858276367,
+      "peak_mem_mb": 17.859375,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 46.34,
+      "fitness": 46.34,
+      "train_time_s": 3.614285469055176
+    },
+    {
+      "id": 29,
+      "generation": 3,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "silu"
+          }
+        ]
+      },
+      "params": 141058,
+      "latency_ms": 0.3765920000660117,
+      "size_mb": 0.5359506607055664,
+      "peak_mem_mb": 15.0625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.5,
+      "fitness": 49.5,
+      "train_time_s": 4.8898913860321045
+    },
+    {
+      "id": 30,
+      "generation": 3,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 75146,
+      "latency_ms": 0.18462550019648916,
+      "size_mb": 0.286468505859375,
+      "peak_mem_mb": 14.51953125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 48.84,
+      "fitness": 48.84,
+      "train_time_s": 1.5278842449188232
+    },
+    {
+      "id": 31,
+      "generation": 3,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 63146,
+      "latency_ms": 0.18081300004268996,
+      "size_mb": 0.24096202850341797,
+      "peak_mem_mb": 14.37109375,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.82,
+      "fitness": 49.82,
+      "train_time_s": 1.3306512832641602
+    },
+    {
+      "id": 32,
+      "generation": 3,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 112218,
+      "latency_ms": 0.16540299998268893,
+      "size_mb": 0.42560291290283203,
+      "peak_mem_mb": 14.81640625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.24,
+      "fitness": 49.24,
+      "train_time_s": 1.1562974452972412
+    },
+    {
+      "id": 33,
+      "generation": 3,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 83162,
+      "latency_ms": 0.3901489997133467,
+      "size_mb": 0.3163299560546875,
+      "peak_mem_mb": 14.546875,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 48.48,
+      "fitness": 48.48,
+      "train_time_s": 1.4369349479675293
+    },
+    {
+      "id": 34,
+      "generation": 3,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 3,
+            "channels": 48,
+            "kernel": 5,
+            "block": "conv",
+            "expand": 4,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 264322,
+      "latency_ms": 0.7224679998216743,
+      "size_mb": 1.0062408447265625,
+      "peak_mem_mb": 16.40625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 45.36,
+      "fitness": 45.36,
+      "train_time_s": 1.5703299045562744
+    },
+    {
+      "id": 35,
+      "generation": 3,
+      "arch": {
+        "resolution": 28,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 32,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 96962,
+      "latency_ms": 0.21514499985642033,
+      "size_mb": 0.36833763122558594,
+      "peak_mem_mb": 14.55078125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 47.48,
+      "fitness": 47.48,
+      "train_time_s": 3.2718329429626465
+    },
+    {
+      "id": 36,
+      "generation": 4,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 139802,
+      "latency_ms": 0.32023850008044974,
+      "size_mb": 0.5272855758666992,
+      "peak_mem_mb": 15.3828125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 51.18,
+      "fitness": 51.18,
+      "train_time_s": 4.04863977432251
+    },
+    {
+      "id": 37,
+      "generation": 4,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 2,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 136218,
+      "latency_ms": 0.28824750006606337,
+      "size_mb": 0.5166187286376953,
+      "peak_mem_mb": 15.0390625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 48.06,
+      "fitness": 48.06,
+      "train_time_s": 1.474020004272461
+    },
+    {
+      "id": 38,
+      "generation": 4,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 42762,
+      "latency_ms": 0.26087050014211854,
+      "size_mb": 0.16324806213378906,
+      "peak_mem_mb": 14.23828125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 44.06,
+      "fitness": 44.06,
+      "train_time_s": 1.2544000148773193
+    },
+    {
+      "id": 39,
+      "generation": 4,
+      "arch": {
+        "resolution": 28,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 42762,
+      "latency_ms": 0.13812500014864781,
+      "size_mb": 0.16324806213378906,
+      "peak_mem_mb": 14.1484375,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 45.56,
+      "fitness": 45.56,
+      "train_time_s": 3.2875308990478516
+    },
+    {
+      "id": 40,
+      "generation": 4,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 2,
+            "channels": 48,
+            "kernel": 5,
+            "block": "conv",
+            "expand": 4,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 182626,
+      "latency_ms": 0.5023050000545481,
+      "size_mb": 0.6948060989379883,
+      "peak_mem_mb": 15.703125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.14,
+      "fitness": 49.14,
+      "train_time_s": 1.2049875259399414
+    },
+    {
+      "id": 41,
+      "generation": 4,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 2,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "mbconv",
+            "expand": 2,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "silu"
+          }
+        ]
+      },
+      "params": 128202,
+      "latency_ms": 0.4395475000364968,
+      "size_mb": 0.4876575469970703,
+      "peak_mem_mb": 15.1015625,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 47.28,
+      "fitness": 47.28,
+      "train_time_s": 1.704427719116211
+    },
+    {
+      "id": 42,
+      "generation": 4,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 3,
+            "channels": 96,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "leaky_relu"
+          }
+        ]
+      },
+      "params": 94538,
+      "latency_ms": 0.20716450012514542,
+      "size_mb": 0.36001014709472656,
+      "peak_mem_mb": 14.76953125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 44.4,
+      "fitness": 44.4,
+      "train_time_s": 4.2626659870147705
+    },
+    {
+      "id": 43,
+      "generation": 4,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 76002,
+      "latency_ms": 0.2786034999644471,
+      "size_mb": 0.2892417907714844,
+      "peak_mem_mb": 14.4453125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.66,
+      "fitness": 49.66,
+      "train_time_s": 1.4573419094085693
+    },
+    {
+      "id": 44,
+      "generation": 5,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 139802,
+      "latency_ms": 0.19860550037265057,
+      "size_mb": 0.5272855758666992,
+      "peak_mem_mb": 15.1484375,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 48.4,
+      "fitness": 48.4,
+      "train_time_s": 3.4008123874664307
+    },
+    {
+      "id": 45,
+      "generation": 5,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 16,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 29066,
+      "latency_ms": 0.07941200010463945,
+      "size_mb": 0.1132965087890625,
+      "peak_mem_mb": 13.76953125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 45.48,
+      "fitness": 45.48,
+      "train_time_s": 1.768547534942627
+    },
+    {
+      "id": 46,
+      "generation": 5,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 144642,
+      "latency_ms": 0.3825980002147844,
+      "size_mb": 0.5457181930541992,
+      "peak_mem_mb": 15.5078125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.62,
+      "fitness": 49.62,
+      "train_time_s": 1.9005582332611084
+    },
+    {
+      "id": 47,
+      "generation": 5,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "leaky_relu"
+          }
+        ]
+      },
+      "params": 76002,
+      "latency_ms": 0.2748210001755069,
+      "size_mb": 0.28938770294189453,
+      "peak_mem_mb": 14.4453125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 48.2,
+      "fitness": 48.2,
+      "train_time_s": 1.3776640892028809
+    },
+    {
+      "id": 48,
+      "generation": 5,
+      "arch": {
+        "resolution": 24,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 76002,
+      "latency_ms": 0.17106150016843458,
+      "size_mb": 0.2892417907714844,
+      "peak_mem_mb": 14.27734375,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 46.38,
+      "fitness": 46.38,
+      "train_time_s": 1.0938284397125244
+    },
+    {
+      "id": 49,
+      "generation": 5,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 3,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 2,
+            "channels": 96,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "hardswish"
+          }
+        ]
+      },
+      "params": 309914,
+      "latency_ms": 0.37836350020370446,
+      "size_mb": 1.167572021484375,
+      "peak_mem_mb": 17.20703125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 49.42,
+      "fitness": 49.42,
+      "train_time_s": 6.268866300582886
+    },
+    {
+      "id": 50,
+      "generation": 5,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 24,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "dwsep",
+            "expand": 6,
+            "act": "silu"
+          },
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 51978,
+      "latency_ms": 0.20177550004518707,
+      "size_mb": 0.19849109649658203,
+      "peak_mem_mb": 14.26953125,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 46.12,
+      "fitness": 46.12,
+      "train_time_s": 2.636456251144409
+    },
+    {
+      "id": 51,
+      "generation": 5,
+      "arch": {
+        "resolution": 32,
+        "stem_channels": 16,
+        "stages": [
+          {
+            "blocks": 1,
+            "channels": 64,
+            "kernel": 3,
+            "block": "conv",
+            "expand": 6,
+            "act": "hardswish"
+          },
+          {
+            "blocks": 3,
+            "channels": 64,
+            "kernel": 5,
+            "block": "mbconv",
+            "expand": 4,
+            "act": "relu"
+          },
+          {
+            "blocks": 1,
+            "channels": 96,
+            "kernel": 5,
+            "block": "dwsep",
+            "expand": 4,
+            "act": "relu"
+          }
+        ]
+      },
+      "params": 139802,
+      "latency_ms": 0.2993144998981734,
+      "size_mb": 0.5269384384155273,
+      "peak_mem_mb": 15.4375,
+      "status": "accepted",
+      "violations": "",
+      "val_acc": 50.08,
+      "fitness": 50.08,
+      "train_time_s": 1.8827338218688965
+    }
+  ]
+}

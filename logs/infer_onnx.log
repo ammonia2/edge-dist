@@ -1,0 +1,26 @@
+== mobilenetv2_kd [onnx, cifar100, input 32px]
+   test accuracy 30.69%  (845 img/s)
+== mobilenetv2_baseline [onnx, cifar100, input 32px]
+   test accuracy 54.44%  (886 img/s)
+== squeezenet_kd [onnx, cifar100, input 32px]
+   test accuracy 38.25%  (1441 img/s)
+== squeezenet_baseline [onnx, cifar100, input 32px]
+   test accuracy 51.39%  (1381 img/s)
+== efficientnet_lite0_kd [onnx, cifar100, input 32px]
+   test accuracy 48.80%  (713 img/s)
+== efficientnet_lite0_baseline [onnx, cifar100, input 32px]
+   test accuracy 56.67%  (728 img/s)
+== nas_best [onnx, cifar10, input 32px]
+   test accuracy 88.18%  (2769 img/s)
+== mobilenetv2_kd [onnx, cifar100, input 32px]
+   test[0] true=mountain     pred=bridge
+   test[1] true=forest       pred=forest
+   test[2] true=seal         pred=camel
+   test[3] true=mushroom     pred=streetcar
+   test[4] true=sea          pred=sea
+== nas_best [onnx, cifar10, input 32px]
+   test[0] true=cat          pred=cat
+   test[1] true=ship         pred=ship
+   test[2] true=ship         pred=ship
+   test[3] true=airplane     pred=ship
+   test[4] true=frog         pred=frog

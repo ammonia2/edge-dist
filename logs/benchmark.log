@@ -1,0 +1,23 @@
+{'model': 'mobilenetv2_kd', 'dataset': 'cifar100', 'training': 'kd', 'params_M': 2.352, 'onnx_size_MB': 8.948, 'test_acc_%': np.float64(30.69), 'torch_latency_ms': 11.374, 'ort_latency_ms': 1.681, 'ort_throughput_img_s': 944.938, 'ort_peak_mem_MB': 42.586}
+{'model': 'mobilenetv2_baseline', 'dataset': 'cifar100', 'training': 'baseline', 'params_M': 2.352, 'onnx_size_MB': 8.948, 'test_acc_%': np.float64(54.44), 'torch_latency_ms': 8.079, 'ort_latency_ms': 1.152, 'ort_throughput_img_s': 1048.61, 'ort_peak_mem_MB': 42.293}
+{'model': 'squeezenet_kd', 'dataset': 'cifar100', 'training': 'kd', 'params_M': 0.78, 'onnx_size_MB': 2.966, 'test_acc_%': np.float64(38.25), 'torch_latency_ms': 6.217, 'ort_latency_ms': 0.874, 'ort_throughput_img_s': 1296.662, 'ort_peak_mem_MB': 21.781}
+{'model': 'squeezenet_baseline', 'dataset': 'cifar100', 'training': 'baseline', 'params_M': 0.78, 'onnx_size_MB': 2.966, 'test_acc_%': np.float64(51.39), 'torch_latency_ms': 4.277, 'ort_latency_ms': 0.63, 'ort_throughput_img_s': 2044.75, 'ort_peak_mem_MB': 22.398}
+{'model': 'efficientnet_lite0_kd', 'dataset': 'cifar100', 'training': 'kd', 'params_M': 3.499, 'onnx_size_MB': 13.306, 'test_acc_%': np.float64(48.8), 'torch_latency_ms': 12.405, 'ort_latency_ms': 2.037, 'ort_throughput_img_s': 863.281, 'ort_peak_mem_MB': 56.855}
+{'model': 'efficientnet_lite0_baseline', 'dataset': 'cifar100', 'training': 'baseline', 'params_M': 3.499, 'onnx_size_MB': 13.306, 'test_acc_%': np.float64(56.67), 'torch_latency_ms': 8.379, 'ort_latency_ms': 1.472, 'ort_throughput_img_s': 826.249, 'ort_peak_mem_MB': 56.836}
+{'model': 'nas_best', 'dataset': 'cifar10', 'training': 'nas', 'params_M': 0.14, 'onnx_size_MB': 0.533, 'test_acc_%': np.float64(88.18), 'torch_latency_ms': 3.089, 'ort_latency_ms': 0.532, 'ort_throughput_img_s': 2463.292, 'ort_peak_mem_MB': 15.316}
+
+                      model  dataset training  params_M  onnx_size_MB  test_acc_%  torch_latency_ms  ort_latency_ms  ort_throughput_img_s  ort_peak_mem_MB
+             mobilenetv2_kd cifar100       kd     2.352         8.948       30.69            11.374           1.681               944.938           42.586
+       mobilenetv2_baseline cifar100 baseline     2.352         8.948       54.44             8.079           1.152              1048.610           42.293
+              squeezenet_kd cifar100       kd     0.780         2.966       38.25             6.217           0.874              1296.662           21.781
+        squeezenet_baseline cifar100 baseline     0.780         2.966       51.39             4.277           0.630              2044.750           22.398
+      efficientnet_lite0_kd cifar100       kd     3.499        13.306       48.80            12.405           2.037               863.281           56.855
+efficientnet_lite0_baseline cifar100 baseline     3.499        13.306       56.67             8.379           1.472               826.249           56.836
+                   nas_best  cifar10      nas     0.140         0.533       88.18             3.089           0.532              2463.292           15.316
+
+           student  baseline_acc_%  kd_acc_%  kd_gain_pts  teacher_acc_%
+       mobilenetv2           54.44     30.69       -23.75          81.14
+        squeezenet           51.39     38.25       -13.14          81.14
+efficientnet_lite0           56.67     48.80        -7.87          81.14
+
+NAS constraints: {'max_latency_ms': 4.0, 'max_size_mb': 2.0, 'max_peak_mem_mb': 30.0}
